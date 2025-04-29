@@ -1,6 +1,6 @@
 import tkinter as ventana 
 
-class Ventana ():
+class Ventana:
  def __init____(self, datoColor, datoTitulo, datoBuscador):
     self.Color=datocolor
     self.Titulo=datoTitulo
