@@ -1,3 +1,4 @@
+
 import tkinter as ventana 
 
 class Ventana:
@@ -5,16 +6,17 @@ class Ventana:
     self.Color=datocolor
     self.Titulo=datoTitulo
     self.Buscador=datoBuscador
-
- def tomar_datos(self):
+  
    def crear_vivero_vital(self):
-     vivero_vital=Ventana.tk()
-     vivero_vital.title(self.titulo)
+     vivero_vital=ventana.Tk()
+     self.vivero=ventana.StringVar()
+     vivero_vital.title(self.Titulo)
+     vivero_vital.geometry(400*500)
      vivero_vital.config(bg=self.color, height=500, width=600)
-     return crear_vivero_vital
+     return vivero_vital
 
  def crear_contenedor(self,datoContenedor):
-    contenedor=Ventana.Frame(datoContenedor)
+    contenedor=ventana.Frame(datoContenedor)
     contenedor.config(bg="verde",width=500, height=400,padx=20,pady=20)
     contenedor.pack()
     return contenedor
@@ -36,23 +38,23 @@ global verifica_contraseña
 global END
 
 def verifica_login(self, datoverificar):
-    Admi=verifica_Admi.get()
+    verifica_Admi=Admi.get()
     contraseña=verifica_contraseña.get()
     login_Admi.delete(0, END)
     login_contraseña.delete(0, END)
 
 Admi=list()
-if Admi in list:
+if Admi:
   archivo = (Admi, "r")
-  verifica = archivo
-  if verifica:
+  verificar = archivo()
+  if verificar():
     print("exito_login")
-  else:
+elif:
    print("error_contraseña")
 else:
     print("error_Admi")
 
-    for i in range():
+for i in range():
         login=login+i
         print(login)
 
@@ -61,12 +63,11 @@ else:
     global borrar_error_Admi
 
 def error_Admi(self):
-   
     ventana_error_Admi=toplevel=Ventana_login()
     ventana_error_Admi.title("ERROR")
     ventana_error_Admi.geometry("500*600")
     Label=ventana_error_Admi, text= "Admi incorrecto".pack()
-    Button=ventana_error_Admi, text="Ok", command=borrar_error_Admi()
+    Button(ventana_error_Admi, text="Ok", command=borrar_error_Admi())
 
 
 def Registro_inventario(self,inventario):
@@ -77,7 +78,7 @@ def Registro_inventario(self,inventario):
     Nombre_del_inventario.pack()
 
     Label(Superficie, text="Superficie ").pack()
-    Superficie=Entry=Registro_inventario,textvariable = Superficie;
+    Superficie=Entry(Registro_inventario,textvariable = Superficie);
     Superficie.pack()
 
     Label(Tipo_de_cultura, text="Tipo de cultura ").pack()
@@ -107,7 +108,7 @@ def Registro_inventario(self,inventario):
     Nombre_del_inventario.pack()   
     
     Label(Superficie, text="Superficie ").pack()
-    Superficie=Entry= Registro_inventario, textvariable = Superficie;
+    Superficie=Entry(Registro_inventario, textvariable = Superficie);
     Superficie.pack()
 
     Label(Tipo_de_cultura, text="Tipo de cultura ").pack()
@@ -131,14 +132,15 @@ def Registro_inventario(self,inventario):
     Sistema_de_Riego.pack()
 
 def crearMenu(self, datocontenedor):
-   menuRespuesta=datocontenedor.Menu(datocontenedor)
-   Menu=datocontenedor.Menu(menuRespuesta, tearoff=0)
-   Menu.add_command.Button(text="Registro de inventario")
-   Menu.add_command.button(text="Control de inventario" )
-   Menu.add_command.Button(text="Control de humendad" )
-   Menu.add_command.Button(text="Control de piso" )
-   Menu.add_command.Button(text="Enfermedad" )
-   datocontenedor.config(menu=menuRespuesta)
+   Menu=ventana.Menu(datocontenedor)
+   inventarioMenu=ventana.menu(Menu, tearoff=0)
+   inventarioMenu.add_command.Button(text="Registro de inventario")
+   inventarioMenu.add_command.button(text="Control de inventario" )
+   inventarioMenu.add_command.Button(text="Control de humendad" )
+   inventarioMenu.add_command.Button(text="Control de piso" )
+   inventarioMenu.add_command.Button(text="Enfermedad" )
+   Menu.add_cascade(label="inventarios",Menu)
+   datocontenedor.config(menu)
    
    
    global StringVar
@@ -149,7 +151,7 @@ def control_de_inventario(self):
     self.Buscador.grid(row = 4, column = 1)
 
     
-    Label(control_de_inventario, text="inventario los Andes".pack())
+    Label(control_de_inventario, text="inventario los Andes").pack()
     Label(control_de_inventario, text="inventario las Flores ").pack()
     Label(control_de_inventario, text="inventario los pinos").pack()
     Label(control_de_inventario, text="inventario El mirador").pack()
@@ -184,17 +186,17 @@ def control_de_inventario(self):
     Button(frame, text = "regresar", command = self.regitro).grid(row = 4, column = 1)
 
 def control_de_humedad(self, dstohumedad):
-    Button(frame, text = "editar", command = self.registro.grid(row = 4, column = 1))
+    Button(frame, text = "editar", command = self.registro).grid(row = 4, column = 1))
     Button(frame, text = "eliminar", command = self.registro).grid(row = 4, column = 1)
     Button(frame, text = "detalles", command = self.registro).grid(row = 4, column = 1)
 
 def control_de_piso(self, datopiso):
-    Button(frame, text = "editar", command = self.registro.grid(row = 4, column = 1))
+    Button(frame, text = "editar", command = self.registro).grid(row = 4, column = 1))
     Button(frame, text = "eliminar", command = self.registro).grid(row = 4, column = 1)
     Button(frame, text = "detalles", command = self.registro).grid(row = 4, column = 1)
 
 def Enfermedad(self, datoenfermedad):
-    Button(frame, text = "editar", command = self.registro.grid(row = 4, column = 1))
+    Button(frame, text = "editar", command = self.registro).grid(row = 4, column = 1))
     Button(frame, text = "eliminar", command = self.registro).grid(row = 4, column = 1)
     Button(frame, text = "detalles", command = self.registro).grid(row = 4, column = 1)
 
