@@ -1,3 +1,4 @@
+import Controlador as Modelo
 class controlador:
 
     def __init__(self):
