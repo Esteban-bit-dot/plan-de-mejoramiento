@@ -1,3 +1,4 @@
+import Modelo as Vista
 class modelo_vivero_vital:
      
 # abctraccion
