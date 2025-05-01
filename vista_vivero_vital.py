@@ -2,14 +2,14 @@ import tkinter as tk
 
 class Ventana ():
  def __init____(self, datoColor, datoTitulo, datoBuscador):
-    self.Color=datocolor
+    self.Color=datoColor
     self.Titulo=datoTitulo
     self.Buscador=datoBuscador
 
 
  def crear_vivero_vital(self):
      vivero_vital=ventana.Tk()
-     self.vivero=ventana.StringVar()
+     self.vivero=Ventana.StringVar()
      vivero_vital.title(self.Titulo)
      vivero_vital.geometry(400*500)
      vivero_vital.config(bg=self.color, height=500, width=600)
