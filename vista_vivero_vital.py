@@ -153,7 +153,7 @@ def crearMenu(self, datocontenedor):
  
 def control_de_inventario(self):
     Label=ventana.Label(Frame, text = 'Buscar: ').grid(row = 4, column = 1)
-    self.Buscador = Entry= Frame,textvariable = StringVar()
+    self.Buscador = Entry(Frame,textvariable = StringVar())
     self.Buscador.grid(row = 4, column = 1)
 
     
