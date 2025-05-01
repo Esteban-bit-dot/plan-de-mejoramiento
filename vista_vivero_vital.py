@@ -39,7 +39,7 @@ global END
 
 def verifica_login(self, datoverificar):
     Admi=verifica_Admi.get()
-    contraseña=verifica_contraseña.get()
+    contraceña=verifica_contraceña.get()
     login_Admi.delete(0, END)
     login_contraseña.delete(0, END)
 
