@@ -177,13 +177,10 @@ def getdatos(datos):
 
 #******************************Codigo Pricipal***************************************#
 
-objvivero_vital=vivero()
-objvivero_vital.asignacion_material("marron claro", " rectangulo", " mediano")
-objvivero_hijo1=vivero()
-objvivero_hijo1.asignacion_material("marron claro","retangulo","mediano","plantas")
-objvivero_hijo2=vivero()
-objvivero_hijo2.asignacion_material2("marron claro","retangulo","mediano","plantas")
-objvivero_vital.Guardar_datos()
-Guardar_datos.vivero_vital=Actualizar_datos()
-Eliminar_datos.objvivero_vital()
-Mostrar_datos()
+objvivero_vital=vivero("marron","rentagulo","grande","rojo")
+objvivero_hijo1=vivero("marron claro","retangulo","mediano","plantas")
+objvivero_hijo2=vivero("marron claro","retangulo","mediano","plantas")
+objvivero_vital.Guardar_datos("marron claro","retangulo","mediano","plantas")
+Guardar_datos.vivero_vital=Actualizar_datos("marron claro","retangulo","mediano","plantas")
+Eliminar_datos.objvivero_vital("marron claro","retangulo","mediano","plantas")
+Mostrar_datos("marron claro","retangulo","mediano","plantas")
