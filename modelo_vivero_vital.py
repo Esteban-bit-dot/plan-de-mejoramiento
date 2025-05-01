@@ -170,7 +170,7 @@ def Mostrar_datos(self,datocolor,datoforma,datotamaño, datoplanta):
     self.Mostrar_datos = (datocolor,datoforma,datotamaño, datoplanta)
 
 def setdatos(self, datos):
-    dato = self.dato()
+   datos = self.datos()
 
 def getdatos(datos):
      return datos();
